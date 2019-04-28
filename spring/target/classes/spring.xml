@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.scp.pratice.hibernate.spring.Employee" id="emp" name ="employee" >
+		<property name="emp_id" value="10"></property>
+		<property name="emp_name" value="Rinkesh"></property>
+		<property name="addr" >
+			<bean class="com.scp.pratice.hibernate.spring.Address" >
+				<property name="city" value="pune"></property>
+				<property name="Street" value="katraj"></property>
+			</bean>
+		</property>
+		<property name="addr2" ref="adr2"></property>
+	</bean>
+
+	<bean class="com.scp.pratice.hibernate.spring.Address" id="adr2">
+		<property name="city" value="kop"></property>
+		<property name="Street" value="tarabai"></property>
+	</bean>
+
+	<bean
+		class="com.scp.pratice.hibernate.spring.Constructor_injection"
+		id="emp2">
+		<constructor-arg index="0" value="10"></constructor-arg>
+		<constructor-arg index="1" value="bdjv"></constructor-arg>
+	</bean>
+	
+	<alias name="adr2" alias ="address2"></alias>
+</beans>

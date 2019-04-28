@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="autowiring.Employee1" id="emp" autowire="constructor">
+	<property name ="addr1" ref="addr1"></property>
+	</bean>
+
+	<bean class="com.scp.pratice.hibernate.spring.Address" id="addr1">
+		<property name="Street" value="tarabai"></property>
+		<property name="city" value="kop1"></property>
+	</bean>
+
+	<!-- <bean class="com.scp.pratice.hibernate.spring.Address" id="addr2"> 
+	<property name="city" value="kop2"></property>
+	 <property name="Street" value="tarabai"></property> 
+		</bean> -->
+		<!-- </bean> <bean class="com.scp.pratice.hibernate.spring.Address" id="addr3"> 
+		<property name="city" value="kop3"></property> <property name="Street" value="tarabai"></property> 
+		</bean> <bean class="com.scp.pratice.hibernate.spring.Address" id="addr4"> 
+		<property name="city" value="kop4"></property> <property name="Street" value="tarabai"></property> 
+		</bean> <bean class="com.scp.pratice.hibernate.spring.Address" id="addr5"> 
+		<property name="city" value="kop5"></property> <property name="Street" value="tarabai"></property> 
+		</bean> -->
+
+</beans>
